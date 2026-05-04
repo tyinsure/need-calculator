@@ -756,7 +756,7 @@
   <div class="header-brand">
     <div class="header-icon">🛡️</div>
     <div class="header-title">
-      <h1>Insurance Need Calculator</h1>
+      <h1>คำนวนทุนประกันจำเป็น</h1>
       <p>ระบบคำนวนทุนประกันชีวิต | Need Approach Method</p>
     </div>
   </div>
@@ -764,26 +764,33 @@
 </div>
 
 <!-- NAV TABS -->
-<div class="nav-tabs">
+<!--<div class="nav-tabs">
   <div class="nav-tab active" id="tab1" onclick="switchTab('input')">
     <div class="tab-num">1</div>
     กรอกข้อมูล
   </div>
   <div class="nav-tab" id="tab2" onclick="switchTab('report')">
     <div class="tab-num">2</div>
-    รายงานผล
+    รายงานสรุปผล
   </div>
-</div>
+</div> -->
 
 <!-- ========== PAGE 1: INPUT ========== -->
 <div class="page active" id="page-input">
   <div class="container">
 
     <!-- NEED EXPLANATION -->
-    <div class="formula-note">
+    <!--<div class="formula-note">
       <span class="fi">💡</span>
       <div>
         <strong>หลักการ Need Approach:</strong> คำนวนจากความต้องการที่แท้จริง (หนี้สิน + ค่าใช้จ่ายครอบครัว + เป้าหมายอนาคต) หักลบด้วยทรัพย์สินที่มีอยู่แล้ว เพื่อหา "ช่องว่างทางการเงิน" ที่ต้องใช้ทุนประกันรองรับ
+      </div>
+    </div> -->
+
+    <div class="formula-note">
+      <span class="fi">‼️</span>
+      <div>
+        <strong>ข้อมูลทั้งหมดไว้สำหรับให้ผู้ใช้คำนวนทุนประกันที่จำเป็นตามหลัก Need Approach เท่านั้น ไม่ได้มีการบันทึกข้อมูลไว้แต่อย่างใด </strong>
       </div>
     </div>
 
@@ -802,14 +809,14 @@
             <label class="form-label"><span class="label-icon">📋</span>ชื่อ-นามสกุล</label>
             <div class="input-wrapper">
               <span class="input-prefix">👤</span>
-              <input type="text" class="form-input" id="client_name" placeholder="ชื่อ-นามสกุลผู้เอาประกัน">
+              <input type="text" class="form-input" id="client_name" placeholder="">
             </div>
           </div>
           <div class="form-group">
             <label class="form-label"><span class="label-icon">🎂</span>อายุปัจจุบัน</label>
             <div class="input-wrapper">
               <span class="input-prefix">อายุ</span>
-              <input type="number" class="form-input" id="age" placeholder="35" min="1" max="99">
+              <input type="number" class="form-input" id="age" placeholder="" min="1" max="99">
               <span class="input-suffix">ปี</span>
             </div>
           </div>
@@ -817,18 +824,18 @@
             <label class="form-label"><span class="label-icon">💼</span>รายได้ต่อปี</label>
             <div class="input-wrapper">
               <span class="input-prefix">฿</span>
-              <input type="number" class="form-input" id="annual_income" placeholder="600,000" min="0">
+              <input type="number" class="form-input" id="annual_income" placeholder="" min="0">
               <span class="input-suffix">บาท</span>
             </div>
           </div>
           <div class="form-group">
-            <label class="form-label"><span class="label-icon">⏳</span>ปีที่ต้องการคุ้มครอง</label>
+            <label class="form-label"><span class="label-icon">⏳</span>จำนวนปีที่อยากเตรียมเงินไว้</label>
             <div class="input-wrapper">
               <span class="input-prefix">จำนวน</span>
-              <input type="number" class="form-input" id="protect_years" placeholder="20" min="1" max="50">
+              <input type="number" class="form-input" id="protect_years" placeholder="" min="1" max="50">
               <span class="input-suffix">ปี</span>
             </div>
-            <span class="form-hint">เช่น จนถึงอายุเกษียณ หรืออายุลูกจบการศึกษา</span>
+            <span class="form-hint">เช่น จนถึงอายุเกษียณ หรือ จนถึงวันที่ลูกจบการศึกษา</span>
           </div>
         </div>
       </div>
@@ -840,24 +847,24 @@
         <div class="section-icon">📉</div>
         <div>
           <div class="section-title">ภาระและความต้องการทางการเงิน (Needs)</div>
-          <div class="section-subtitle">สิ่งที่ครอบครัวต้องการหากเกิดเหตุไม่คาดฝัน</div>
+          <div class="section-subtitle">สิ่งที่ครอบครัวต้องมีหากเกิดเหตุไม่คาดฝันขึ้นกับเรา</div>
         </div>
       </div>
       <div class="section-body">
         <div class="form-grid">
           <div class="form-group">
-            <label class="form-label"><span class="label-icon">🏠</span>หนี้บ้าน/จำนอง</label>
+            <label class="form-label"><span class="label-icon">🏠</span>หนี้บ้านคงค้าง</label>
             <div class="input-wrapper">
               <span class="input-prefix">฿</span>
-              <input type="number" class="form-input" id="debt_home" placeholder="2,500,000" min="0">
+              <input type="number" class="form-input" id="debt_home" placeholder="" min="0">
               <span class="input-suffix">บาท</span>
             </div>
           </div>
           <div class="form-group">
-            <label class="form-label"><span class="label-icon">🚗</span>หนี้รถยนต์/เงินกู้อื่น</label>
+            <label class="form-label"><span class="label-icon">🚗</span>หนี้รถยนต์คงค้าง</label>
             <div class="input-wrapper">
               <span class="input-prefix">฿</span>
-              <input type="number" class="form-input" id="debt_car" placeholder="500,000" min="0">
+              <input type="number" class="form-input" id="debt_car" placeholder="" min="0">
               <span class="input-suffix">บาท</span>
             </div>
           </div>
@@ -865,7 +872,7 @@
             <label class="form-label"><span class="label-icon">💳</span>หนี้บัตรเครดิต/หนี้อื่นๆ</label>
             <div class="input-wrapper">
               <span class="input-prefix">฿</span>
-              <input type="number" class="form-input" id="debt_other" placeholder="100,000" min="0">
+              <input type="number" class="form-input" id="debt_other" placeholder="" min="0">
               <span class="input-suffix">บาท</span>
             </div>
           </div>
@@ -873,7 +880,7 @@
             <label class="form-label"><span class="label-icon">🍱</span>ค่าครองชีพครอบครัวต่อปี</label>
             <div class="input-wrapper">
               <span class="input-prefix">฿</span>
-              <input type="number" class="form-input" id="living_cost" placeholder="360,000" min="0">
+              <input type="number" class="form-input" id="living_cost" placeholder="" min="0">
               <span class="input-suffix">บาท/ปี</span>
             </div>
           </div>
@@ -881,7 +888,7 @@
             <label class="form-label"><span class="label-icon">🎓</span>ทุนการศึกษาบุตร</label>
             <div class="input-wrapper">
               <span class="input-prefix">฿</span>
-              <input type="number" class="form-input" id="edu_fund" placeholder="1,000,000" min="0">
+              <input type="number" class="form-input" id="edu_fund" placeholder="" min="0">
               <span class="input-suffix">บาท</span>
             </div>
             <span class="form-hint">รวมทุกคน ตลอดช่วงการศึกษา</span>
@@ -890,7 +897,7 @@
             <label class="form-label"><span class="label-icon">⚰️</span>ค่าจัดงานศพ/ค่าใช้จ่ายสุดท้าย</label>
             <div class="input-wrapper">
               <span class="input-prefix">฿</span>
-              <input type="number" class="form-input" id="funeral_cost" placeholder="200,000" min="0">
+              <input type="number" class="form-input" id="funeral_cost" placeholder="" min="0">
               <span class="input-suffix">บาท</span>
             </div>
           </div>
@@ -898,7 +905,7 @@
             <label class="form-label"><span class="label-icon">🎯</span>เป้าหมายทางการเงินอื่นๆ</label>
             <div class="input-wrapper">
               <span class="input-prefix">฿</span>
-              <input type="number" class="form-input" id="other_goals" placeholder="500,000" min="0">
+              <input type="number" class="form-input" id="other_goals" placeholder="" min="0">
               <span class="input-suffix">บาท</span>
             </div>
             <span class="form-hint">เช่น ทุนเพื่อเลี้ยงดูพ่อแม่ เงินสำรองฉุกเฉิน ฯลฯ</span>
@@ -913,16 +920,16 @@
         <div class="section-icon">📈</div>
         <div>
           <div class="section-title">ทรัพย์สินและทุนประกันที่มีอยู่แล้ว (Resources)</div>
-          <div class="section-subtitle">สิ่งที่ครอบครัวมีอยู่แล้วสามารถนำมาหักได้</div>
+          <div class="section-subtitle">สิ่งที่เตรียมไว้แล้วให้ครอบครัวสามารถนำมาใช้ได้ทันที</div>
         </div>
       </div>
       <div class="section-body">
         <div class="form-grid">
           <div class="form-group">
-            <label class="form-label"><span class="label-icon">🏦</span>เงินออมและเงินสด</label>
+            <label class="form-label"><span class="label-icon">🏦</span>เงินสด/เงินในบัญชีธนาคาร</label>
             <div class="input-wrapper">
               <span class="input-prefix">฿</span>
-              <input type="number" class="form-input" id="savings" placeholder="500,000" min="0">
+              <input type="number" class="form-input" id="savings" placeholder="" min="0">
               <span class="input-suffix">บาท</span>
             </div>
           </div>
@@ -930,7 +937,7 @@
             <label class="form-label"><span class="label-icon">📊</span>การลงทุน (หุ้น/กองทุน/อสังหาฯ)</label>
             <div class="input-wrapper">
               <span class="input-prefix">฿</span>
-              <input type="number" class="form-input" id="investments" placeholder="300,000" min="0">
+              <input type="number" class="form-input" id="investments" placeholder="" min="0">
               <span class="input-suffix">บาท</span>
             </div>
           </div>
@@ -938,7 +945,7 @@
             <label class="form-label"><span class="label-icon">🛡️</span>ทุนประกันที่มีอยู่แล้ว</label>
             <div class="input-wrapper">
               <span class="input-prefix">฿</span>
-              <input type="number" class="form-input" id="existing_insurance" placeholder="1,000,000" min="0">
+              <input type="number" class="form-input" id="existing_insurance" placeholder="" min="0">
               <span class="input-suffix">บาท</span>
             </div>
           </div>
@@ -946,7 +953,7 @@
             <label class="form-label"><span class="label-icon">🏛️</span>เงินสวัสดิการ/ประกันสังคม</label>
             <div class="input-wrapper">
               <span class="input-prefix">฿</span>
-              <input type="number" class="form-input" id="social_security" placeholder="0" min="0">
+              <input type="number" class="form-input" id="social_security" placeholder="" min="0">
               <span class="input-suffix">บาท</span>
             </div>
           </div>
@@ -956,7 +963,7 @@
 
     <!-- CALCULATE BUTTON -->
     <button class="btn-calculate" onclick="calculate()">
-      <span>🔢</span> คำนวนทุนประกันที่ต้องการ
+      <span>🔢</span> คำนวนทุนประกันที่จำเป็น
     </button>
 
   </div>
@@ -979,24 +986,24 @@
           <div class="report-brand">
             <div class="report-brand-icon">🛡️</div>
             <div>
-              <div class="report-brand-name">Insurance Need Report</div>
-              <div class="report-brand-sub">รายงานวิเคราะห์ทุนประกันชีวิต | Need Approach Method</div>
+              <div class="report-brand-name">Report</div>
+              <div class="report-brand-sub">รายงานวิเคราะห์ทุนประกันที่จำเป็นต้องมี</div>
             </div>
           </div>
           <div class="report-date-badge" id="report-date"></div>
         </div>
         <div class="report-hero">
           <div class="report-hero-main">
-            <div class="report-hero-label">📋 ผู้ขอรับการวิเคราะห์</div>
+            <div class="report-hero-label">📋 เจ้าของข้อมูล</div>
             <div style="font-size:1.6rem; font-weight:700; margin-bottom:14px;" id="rpt-name">—</div>
             <div class="report-hero-label">💰 ทุนประกันที่แนะนำ</div>
             <div class="report-hero-amount" id="rpt-coverage">฿ 0</div>
-            <div class="report-hero-unit">บาท (ช่องว่างทางการเงินสุทธิ)</div>
+            <div class="report-hero-unit">บาท (จำนวนเงินที่ต้องเตรียมเพิ่มเติม)</div>
           </div>
-          <div class="report-qr">
+       <!--   <div class="report-qr">
             <img src="data:image/jpeg;base64,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" alt="QR Code LINE">
             <div class="report-qr-label">LINE สอบถามข้อมูล</div>
-          </div>
+          </div> -->
         </div>
       </div>
 
@@ -1011,7 +1018,7 @@
           <div class="summary-value neutral" id="rpt-total-resources">฿ 0</div>
         </div>
         <div class="summary-item">
-          <div class="summary-label">ช่องว่างทางการเงิน (GAP)</div>
+          <div class="summary-label">จำนนวนเงินที่ต้องเตรียมเพิ่มเติม</div>
           <div class="summary-value" id="rpt-gap" style="color: var(--navy);">฿ 0</div>
         </div>
       </div>
@@ -1026,8 +1033,8 @@
               <h3>ภาระและความต้องการ (Needs)</h3>
             </div>
           </div>
-          <div class="breakdown-row"><span class="br-label">หนี้บ้าน/จำนอง</span><span class="br-value" id="rd-home">฿ 0</span></div>
-          <div class="breakdown-row"><span class="br-label">หนี้รถยนต์/เงินกู้อื่น</span><span class="br-value" id="rd-car">฿ 0</span></div>
+          <div class="breakdown-row"><span class="br-label">หนี้บ้านคงค้าง</span><span class="br-value" id="rd-home">฿ 0</span></div>
+          <div class="breakdown-row"><span class="br-label">หนี้รถยนต์คงค้าง</span><span class="br-value" id="rd-car">฿ 0</span></div>
           <div class="breakdown-row"><span class="br-label">หนี้บัตรเครดิต/อื่นๆ</span><span class="br-value" id="rd-other-debt">฿ 0</span></div>
           <div class="breakdown-row"><span class="br-label">ค่าครองชีพครอบครัว (<span id="rd-years">0</span> ปี)</span><span class="br-value" id="rd-living">฿ 0</span></div>
           <div class="breakdown-row"><span class="br-label">ทุนการศึกษาบุตร</span><span class="br-value" id="rd-edu">฿ 0</span></div>
@@ -1047,7 +1054,7 @@
               <h3>ทรัพย์สินที่มีอยู่แล้ว (Resources)</h3>
             </div>
           </div>
-          <div class="breakdown-row"><span class="br-label">เงินออมและเงินสด</span><span class="br-value neg" id="rd-savings">฿ 0</span></div>
+          <div class="breakdown-row"><span class="br-label">เงินสด/เงินในบัญชีธนาคาร</span><span class="br-value neg" id="rd-savings">฿ 0</span></div>
           <div class="breakdown-row"><span class="br-label">การลงทุน (หุ้น/กองทุน/อสังหาฯ)</span><span class="br-value neg" id="rd-invest">฿ 0</span></div>
           <div class="breakdown-row"><span class="br-label">ทุนประกันที่มีอยู่แล้ว</span><span class="br-value neg" id="rd-exist-ins">฿ 0</span></div>
           <div class="breakdown-row"><span class="br-label">เงินสวัสดิการ/ประกันสังคม</span><span class="br-value neg" id="rd-social">฿ 0</span></div>
@@ -1059,7 +1066,7 @@
       </div>
 
       <!-- FORMULA BOX -->
-      <div class="formula-box">
+    <!--  <div class="formula-box">
         <div class="formula-box-inner">
           <div class="formula-steps">
             <div class="formula-step">
@@ -1082,27 +1089,27 @@
             <div class="frl-amount" id="fs-coverage">฿ 0</div>
           </div>
         </div>
-      </div>
+      </div> -->
 
       <!-- RECOMMENDATION -->
-      <div class="recommendation-box">
+    <!--  <div class="recommendation-box">
         <div class="rec-icon">💡</div>
         <div class="rec-content">
-          <h4>คำแนะนำสำหรับ <span id="rec-name">คุณ</span></h4>
+          <h4>คำแนะนำสำหรับคุณ <span id="rec-name">คุณ</span></h4>
           <p id="rec-text">กำลังประมวลผล...</p>
         </div>
-      </div>
+      </div> -->
 
       <!-- DISCLAIMER -->
       <div class="disclaimer">
         <span>⚠️</span>
-        <span>ผลการคำนวนนี้เป็นเพียงการประมาณการเบื้องต้นตามหลัก Need Approach เพื่อใช้เป็นแนวทางในการวางแผน ไม่ใช่ข้อเสนอหรือสัญญาในการรับประกัน ทุนประกันที่เหมาะสมอาจแตกต่างกันตามสภาพสุขภาพ อายุ และเงื่อนไขการรับประกันของแต่ละบริษัท กรุณาปรึกษาตัวแทนประกันชีวิตที่ได้รับใบอนุญาตเพื่อรับคำแนะนำที่เหมาะสมกับท่านโดยเฉพาะ</span>
+        <span>ผลการคำนวนนี้เป็นเพียงการประมาณการเบื้องต้นตามหลัก Need Approach เพื่อใช้เป็นแนวทางในการวางแผน ไม่ใช่ข้อเสนอหรือเป็นการทำสัญญาในการรับประกัน หากต้องการตรวจสอบเบี้ยประกัน หรือ วางแผนเพื่อคุ้มครองทุนประกันที่จำเป็น ท่านสามารถCapture หน้าจอเพื่อบันทึกผล และ ติดต่อผมได้ที่ LINE ID : @TYINSURE</span>
       </div>
 
       <!-- REPORT FOOTER -->
       <div class="report-footer">
-        สร้างโดยระบบคำนวนทุนประกันชีวิต Need Approach | เอกสารนี้จัดทำเพื่อประกอบการวางแผนทางการเงินส่วนบุคคลเท่านั้น<br>
-        ติดต่อสอบถามเพิ่มเติมผ่าน LINE QR Code ด้านบน
+        รายงานการคำนวนทุนประกันที่จำเป็น | เอกสารนี้จัดทำเพื่อประกอบการวางแผนทางการเงินส่วนบุคคลเท่านั้น<br>
+        ติดต่อสอบถามเพิ่ม ID LINE : TYINSURE
       </div>
 
     </div>
